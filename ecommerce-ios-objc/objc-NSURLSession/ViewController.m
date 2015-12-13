@@ -17,6 +17,8 @@
 
 NSString *sessionId = nil;
 NSString *routeId = nil;
+NSString *loginThruCheckout = @"Login to Checkout";
+int noOfItems = 0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +32,7 @@ NSString *routeId = nil;
 
 - (void)getHttpCookies:(NSURLResponse*)response
                 forURL:(NSURL*)url {
-    
+    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSHTTPURLResponse*)response allHeaderFields];
     NSArray *cookies =[NSHTTPCookie cookiesWithResponseHeaderFields:headers forURL:url];
     for (int i = 0; i < [cookies count]; i++) {
@@ -43,19 +45,25 @@ NSString *routeId = nil;
             routeId = [[cookie properties] objectForKey:NSHTTPCookieValue];
         }
     }
+    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)getHttpRequestHeaders:(NSURLRequest*)request {
+    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSMutableURLRequest*)request allHTTPHeaderFields];
     NSLog(@"Request Headers: %@", [headers description]);
+    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)getHttpResponseHeaders:(NSURLResponse*)response {
+    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSDictionary *headers = [(NSHTTPURLResponse*)response allHeaderFields];
     NSLog(@"Response Headers: %@", [headers description]);
+    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)doHttpGet:(NSURL*)url {
+    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url
@@ -75,9 +83,11 @@ NSString *routeId = nil;
                     NSLog(@"HTTP Status Code: %ld", [(NSHTTPURLResponse*)response statusCode]);
                     [self getHttpResponseHeaders:response];
                 }] resume];
+    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (void)doHttpPost:(NSURL*)url {
+    id infoPoint = [ADEumInstrumentation beginCall:self selector:_cmd];
     NSURLSession *session = [NSURLSession sharedSession];
     NSMutableURLRequest *request=[NSMutableURLRequest requestWithURL:url
                                                          cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
@@ -104,10 +114,15 @@ NSString *routeId = nil;
         [self getHttpCookies:response forURL:url];
         [self getHttpResponseHeaders:response];
     }] resume];
+    [ADEumInstrumentation endCall:infoPoint];
 }
 
 - (IBAction)loginClicked:(id)sender {
     [ADEumInstrumentation leaveBreadcrumb:@"loginClicked"];
+    [ADEumInstrumentation startTimerWithName:loginThruCheckout];
+    
+    [ADEumInstrumentation setUserData: @"Username" value:[[NSUserDefaults standardUserDefaults] objectForKey:@"username"] persist:false];
+    [ADEumInstrumentation setUserData: @"Password" value:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"] persist:false];
     
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = @"/rest/user/login";
@@ -128,6 +143,7 @@ NSString *routeId = nil;
     [ADEumInstrumentation leaveBreadcrumb:@"addToCartClicked"];
     
     int x = arc4random() % 10;
+    noOfItems++;
     
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = [NSString stringWithFormat:@"/rest/cart/%d", x];
@@ -137,6 +153,8 @@ NSString *routeId = nil;
 
 - (IBAction)checkoutClicked:(id)sender {
     [ADEumInstrumentation leaveBreadcrumb:@"checkoutClicked"];
+    [ADEumInstrumentation reportMetricWithName:@"No of Items" value: noOfItems];
+    [ADEumInstrumentation stopTimerWithName:loginThruCheckout];
     
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"url"];
     NSString *relativeURL = @"/rest/cart/co";

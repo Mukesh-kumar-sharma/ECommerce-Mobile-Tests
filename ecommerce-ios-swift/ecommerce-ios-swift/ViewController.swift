@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     var jsessionid: String = String()
     var routeid: String = String()
+    var noOfItems: Int64 = 0
+    let loginThruCheckout: String = "Login-to-Checkout"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +26,7 @@ class ViewController: UIViewController {
     
     func getHttpCookies(response: NSURLResponse,
                             url : NSURL) {
+        let infoPoint = ADEumInstrumentation.beginCall(self, selector: __FUNCTION__);
         let httpResponse = response as! NSHTTPURLResponse
         let headers = httpResponse.allHeaderFields as? [String : String]
         let cookies = NSHTTPCookie.cookiesWithResponseHeaderFields(headers!, forURL: httpResponse.URL!)
@@ -36,15 +39,19 @@ class ViewController: UIViewController {
                 routeid = cookie.value
             }
         }
+        ADEumInstrumentation.endCall(infoPoint)
     }
     
     func getHttpRequestHeaders(request: NSMutableURLRequest) {
+        let infoPoint = ADEumInstrumentation.beginCall(self, selector: __FUNCTION__);
         let httpRequest = request
         let headers = httpRequest.allHTTPHeaderFields! as [String : String]
         NSLog("HTTP Request Headers: " + headers.description)
+        ADEumInstrumentation.endCall(infoPoint)
     }
 
     func doHttpPost(url: NSURL) {
+        let infoPoint = ADEumInstrumentation.beginCall(self, selector: __FUNCTION__);
         let request = NSMutableURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
 
@@ -71,9 +78,11 @@ class ViewController: UIViewController {
                 return
             }
         }).resume()
+        ADEumInstrumentation.endCall(infoPoint)
     }
 
     func doHttpGet(url: NSURL) {
+        let infoPoint = ADEumInstrumentation.beginCall(self, selector: __FUNCTION__);
         let request = NSMutableURLRequest(URL: url)
         let session = NSURLSession.sharedSession()
         
@@ -96,6 +105,7 @@ class ViewController: UIViewController {
                 return
             }
         }).resume()
+        ADEumInstrumentation.endCall(infoPoint)
     }
     
     @IBAction func loginClicked(sender: AnyObject) {
@@ -103,6 +113,11 @@ class ViewController: UIViewController {
         let relativeUrl = "/rest/user/login"
         let url = baseUrl! + relativeUrl
         
+        ADEumInstrumentation.leaveBreadcrumb("Login")
+        ADEumInstrumentation.setUserData("Username", value: NSUserDefaults.standardUserDefaults().stringForKey("username")!, persist: false)
+        ADEumInstrumentation.setUserData("Password", value: NSUserDefaults.standardUserDefaults().stringForKey("password")!, persist: false)
+        //ADEumInstrumentation.startTimerWithName(loginThruCheckout)
+
         self.doHttpPost(NSURL(string: url)!)
     }
 
@@ -111,6 +126,8 @@ class ViewController: UIViewController {
         let relativeUrl = "/rest/items/all"
         let url = baseUrl! + relativeUrl
         
+        ADEumInstrumentation.leaveBreadcrumb("getItems")
+        
         self.doHttpGet(NSURL(string: url)!)
     }
     
@@ -118,6 +135,9 @@ class ViewController: UIViewController {
         let baseUrl = NSUserDefaults.standardUserDefaults().stringForKey("url")
         let relativeUrl = "/rest/cart/" + String(arc4random_uniform(10))
         let url = baseUrl! + relativeUrl
+        
+        ADEumInstrumentation.leaveBreadcrumb("addToCart")
+        noOfItems++
 
         self.doHttpGet(NSURL(string: url)!)
     }
@@ -126,8 +146,12 @@ class ViewController: UIViewController {
         let baseUrl = NSUserDefaults.standardUserDefaults().stringForKey("url")
         let relativeUrl = "/rest/cart/co"
         let url = baseUrl! + relativeUrl
+        
+        ADEumInstrumentation.leaveBreadcrumb("Checkout")
+        ADEumInstrumentation.reportMetricWithName("Number of Items", value: noOfItems)
 
         self.doHttpGet(NSURL(string: url)!)
+        //ADEumInstrumentation.stopTimerWithName(loginThruCheckout)
     }
     
     @IBAction func settingsClicked(sender: AnyObject) {
