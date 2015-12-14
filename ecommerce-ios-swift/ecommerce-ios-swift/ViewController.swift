@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var jsessionid: String = String()
     var routeid: String = String()
     var noOfItems: Int64 = 0
-    let loginThruCheckout: String = "Login-to-Checkout"
+    let loginThruCheckout: String = "Login to Checkout"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,7 +116,7 @@ class ViewController: UIViewController {
         ADEumInstrumentation.leaveBreadcrumb("Login")
         ADEumInstrumentation.setUserData("Username", value: NSUserDefaults.standardUserDefaults().stringForKey("username")!, persist: false)
         ADEumInstrumentation.setUserData("Password", value: NSUserDefaults.standardUserDefaults().stringForKey("password")!, persist: false)
-        //ADEumInstrumentation.startTimerWithName(loginThruCheckout)
+        ADEumInstrumentation.startTimerWithName(loginThruCheckout)
 
         self.doHttpPost(NSURL(string: url)!)
     }
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
         ADEumInstrumentation.reportMetricWithName("Number of Items", value: noOfItems)
 
         self.doHttpGet(NSURL(string: url)!)
-        //ADEumInstrumentation.stopTimerWithName(loginThruCheckout)
+        ADEumInstrumentation.stopTimerWithName(loginThruCheckout)
     }
     
     @IBAction func settingsClicked(sender: AnyObject) {

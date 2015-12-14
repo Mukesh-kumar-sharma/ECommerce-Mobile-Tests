@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC58FBFC1C1E4B1D003794F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58FBFB1C1E4B1D003794F6 /* main.m */; };
+		FC58FBFF1C1E4B1D003794F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58FBFE1C1E4B1D003794F6 /* AppDelegate.m */; };
+		FC58FC021C1E4B1D003794F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58FC011C1E4B1D003794F6 /* ViewController.m */; };
+		FC58FC051C1E4B1D003794F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58FC031C1E4B1D003794F6 /* Main.storyboard */; };
+		FC58FC071C1E4B1D003794F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC58FC061C1E4B1D003794F6 /* Assets.xcassets */; };
+		FC58FC0A1C1E4B1D003794F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC58FC081C1E4B1D003794F6 /* LaunchScreen.storyboard */; };
+		FC58FC151C1E4B1E003794F6 /* ecommerce_afnetworking_objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58FC141C1E4B1E003794F6 /* ecommerce_afnetworking_objcTests.m */; };
+		FC58FC201C1E4B1E003794F6 /* ecommerce_afnetworking_objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC58FC1F1C1E4B1E003794F6 /* ecommerce_afnetworking_objcUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC58FC111C1E4B1E003794F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC58FBEF1C1E4B1D003794F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC58FBF61C1E4B1D003794F6;
+			remoteInfo = "ecommerce-afnetworking-objc";
+		};
+		FC58FC1C1C1E4B1E003794F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC58FBEF1C1E4B1D003794F6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC58FBF61C1E4B1D003794F6;
+			remoteInfo = "ecommerce-afnetworking-objc";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC58FBF71C1E4B1D003794F6 /* ecommerce-afnetworking-objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ecommerce-afnetworking-objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC58FBFB1C1E4B1D003794F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC58FBFD1C1E4B1D003794F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC58FBFE1C1E4B1D003794F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC58FC001C1E4B1D003794F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FC58FC011C1E4B1D003794F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FC58FC041C1E4B1D003794F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC58FC061C1E4B1D003794F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FC58FC091C1E4B1D003794F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC58FC0B1C1E4B1D003794F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC58FC101C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ecommerce-afnetworking-objcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC58FC141C1E4B1E003794F6 /* ecommerce_afnetworking_objcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ecommerce_afnetworking_objcTests.m; sourceTree = "<group>"; };
+		FC58FC161C1E4B1E003794F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC58FC1B1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ecommerce-afnetworking-objcUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC58FC1F1C1E4B1E003794F6 /* ecommerce_afnetworking_objcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ecommerce_afnetworking_objcUITests.m; sourceTree = "<group>"; };
+		FC58FC211C1E4B1E003794F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC58FBF41C1E4B1D003794F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC0D1C1E4B1E003794F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC181C1E4B1E003794F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC58FBEE1C1E4B1D003794F6 = {
+			isa = PBXGroup;
+			children = (
+				FC58FBF91C1E4B1D003794F6 /* ecommerce-afnetworking-objc */,
+				FC58FC131C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests */,
+				FC58FC1E1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests */,
+				FC58FBF81C1E4B1D003794F6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC58FBF81C1E4B1D003794F6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC58FBF71C1E4B1D003794F6 /* ecommerce-afnetworking-objc.app */,
+				FC58FC101C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests.xctest */,
+				FC58FC1B1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC58FBF91C1E4B1D003794F6 /* ecommerce-afnetworking-objc */ = {
+			isa = PBXGroup;
+			children = (
+				FC58FBFD1C1E4B1D003794F6 /* AppDelegate.h */,
+				FC58FBFE1C1E4B1D003794F6 /* AppDelegate.m */,
+				FC58FC001C1E4B1D003794F6 /* ViewController.h */,
+				FC58FC011C1E4B1D003794F6 /* ViewController.m */,
+				FC58FC031C1E4B1D003794F6 /* Main.storyboard */,
+				FC58FC061C1E4B1D003794F6 /* Assets.xcassets */,
+				FC58FC081C1E4B1D003794F6 /* LaunchScreen.storyboard */,
+				FC58FC0B1C1E4B1D003794F6 /* Info.plist */,
+				FC58FBFA1C1E4B1D003794F6 /* Supporting Files */,
+			);
+			path = "ecommerce-afnetworking-objc";
+			sourceTree = "<group>";
+		};
+		FC58FBFA1C1E4B1D003794F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC58FBFB1C1E4B1D003794F6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC58FC131C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC58FC141C1E4B1E003794F6 /* ecommerce_afnetworking_objcTests.m */,
+				FC58FC161C1E4B1E003794F6 /* Info.plist */,
+			);
+			path = "ecommerce-afnetworking-objcTests";
+			sourceTree = "<group>";
+		};
+		FC58FC1E1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FC58FC1F1C1E4B1E003794F6 /* ecommerce_afnetworking_objcUITests.m */,
+				FC58FC211C1E4B1E003794F6 /* Info.plist */,
+			);
+			path = "ecommerce-afnetworking-objcUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC58FBF61C1E4B1D003794F6 /* ecommerce-afnetworking-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC58FC241C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objc" */;
+			buildPhases = (
+				FC58FBF31C1E4B1D003794F6 /* Sources */,
+				FC58FBF41C1E4B1D003794F6 /* Frameworks */,
+				FC58FBF51C1E4B1D003794F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ecommerce-afnetworking-objc";
+			productName = "ecommerce-afnetworking-objc";
+			productReference = FC58FBF71C1E4B1D003794F6 /* ecommerce-afnetworking-objc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC58FC0F1C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC58FC271C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objcTests" */;
+			buildPhases = (
+				FC58FC0C1C1E4B1E003794F6 /* Sources */,
+				FC58FC0D1C1E4B1E003794F6 /* Frameworks */,
+				FC58FC0E1C1E4B1E003794F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC58FC121C1E4B1E003794F6 /* PBXTargetDependency */,
+			);
+			name = "ecommerce-afnetworking-objcTests";
+			productName = "ecommerce-afnetworking-objcTests";
+			productReference = FC58FC101C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FC58FC1A1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC58FC2A1C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objcUITests" */;
+			buildPhases = (
+				FC58FC171C1E4B1E003794F6 /* Sources */,
+				FC58FC181C1E4B1E003794F6 /* Frameworks */,
+				FC58FC191C1E4B1E003794F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC58FC1D1C1E4B1E003794F6 /* PBXTargetDependency */,
+			);
+			name = "ecommerce-afnetworking-objcUITests";
+			productName = "ecommerce-afnetworking-objcUITests";
+			productReference = FC58FC1B1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC58FBEF1C1E4B1D003794F6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "AppDynamics E2E";
+				TargetAttributes = {
+					FC58FBF61C1E4B1D003794F6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					FC58FC0F1C1E4B1E003794F6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FC58FBF61C1E4B1D003794F6;
+					};
+					FC58FC1A1C1E4B1E003794F6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FC58FBF61C1E4B1D003794F6;
+					};
+				};
+			};
+			buildConfigurationList = FC58FBF21C1E4B1D003794F6 /* Build configuration list for PBXProject "ecommerce-afnetworking-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC58FBEE1C1E4B1D003794F6;
+			productRefGroup = FC58FBF81C1E4B1D003794F6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC58FBF61C1E4B1D003794F6 /* ecommerce-afnetworking-objc */,
+				FC58FC0F1C1E4B1E003794F6 /* ecommerce-afnetworking-objcTests */,
+				FC58FC1A1C1E4B1E003794F6 /* ecommerce-afnetworking-objcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC58FBF51C1E4B1D003794F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC58FC0A1C1E4B1D003794F6 /* LaunchScreen.storyboard in Resources */,
+				FC58FC071C1E4B1D003794F6 /* Assets.xcassets in Resources */,
+				FC58FC051C1E4B1D003794F6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC0E1C1E4B1E003794F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC191C1E4B1E003794F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC58FBF31C1E4B1D003794F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC58FC021C1E4B1D003794F6 /* ViewController.m in Sources */,
+				FC58FBFF1C1E4B1D003794F6 /* AppDelegate.m in Sources */,
+				FC58FBFC1C1E4B1D003794F6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC0C1C1E4B1E003794F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC58FC151C1E4B1E003794F6 /* ecommerce_afnetworking_objcTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC58FC171C1E4B1E003794F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC58FC201C1E4B1E003794F6 /* ecommerce_afnetworking_objcUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC58FC121C1E4B1E003794F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC58FBF61C1E4B1D003794F6 /* ecommerce-afnetworking-objc */;
+			targetProxy = FC58FC111C1E4B1E003794F6 /* PBXContainerItemProxy */;
+		};
+		FC58FC1D1C1E4B1E003794F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC58FBF61C1E4B1D003794F6 /* ecommerce-afnetworking-objc */;
+			targetProxy = FC58FC1C1C1E4B1E003794F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC58FC031C1E4B1D003794F6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC58FC041C1E4B1D003794F6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FC58FC081C1E4B1D003794F6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC58FC091C1E4B1D003794F6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC58FC221C1E4B1E003794F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC58FC231C1E4B1E003794F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC58FC251C1E4B1E003794F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ecommerce-afnetworking-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FC58FC261C1E4B1E003794F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ecommerce-afnetworking-objc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FC58FC281C1E4B1E003794F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ecommerce-afnetworking-objcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ecommerce-afnetworking-objc.app/ecommerce-afnetworking-objc";
+			};
+			name = Debug;
+		};
+		FC58FC291C1E4B1E003794F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ecommerce-afnetworking-objcTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objcTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ecommerce-afnetworking-objc.app/ecommerce-afnetworking-objc";
+			};
+			name = Release;
+		};
+		FC58FC2B1C1E4B1E003794F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ecommerce-afnetworking-objcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ecommerce-afnetworking-objc";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FC58FC2C1C1E4B1E003794F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "ecommerce-afnetworking-objcUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appdynamics.e2e.ecommerce-afnetworking-objcUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "ecommerce-afnetworking-objc";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC58FBF21C1E4B1D003794F6 /* Build configuration list for PBXProject "ecommerce-afnetworking-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC58FC221C1E4B1E003794F6 /* Debug */,
+				FC58FC231C1E4B1E003794F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC58FC241C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC58FC251C1E4B1E003794F6 /* Debug */,
+				FC58FC261C1E4B1E003794F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC58FC271C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC58FC281C1E4B1E003794F6 /* Debug */,
+				FC58FC291C1E4B1E003794F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FC58FC2A1C1E4B1E003794F6 /* Build configuration list for PBXNativeTarget "ecommerce-afnetworking-objcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC58FC2B1C1E4B1E003794F6 /* Debug */,
+				FC58FC2C1C1E4B1E003794F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC58FBEF1C1E4B1D003794F6 /* Project object */;
+}
