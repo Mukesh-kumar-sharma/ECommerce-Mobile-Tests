@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <ADEUMInstrumentation/ADEUMInstrumentation.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self loadAppDefaults];
+    
+    NSString* appKey = [[NSUserDefaults standardUserDefaults] objectForKey:@"appKey"];
+    NSString* collectorURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"collectorUrl"];
+    
+    ADEumAgentConfiguration* agentConfig = [[ADEumAgentConfiguration alloc] init];
+    agentConfig.appKey = appKey;
+    agentConfig.collectorURL = collectorURL;
+    
+    // 4.3: use agentConfig.loggingLevel
+    //agentConfig.loggingLevel = ADEumLoggingLevelAll;
+    agentConfig.enableLogging = true;
+    
+    [ADEumInstrumentation initWithConfiguration:agentConfig];
+
+    // 4.2 - for 4.3 use initWithConfiguration
+    //[ADEumInstrumentation initWithKey:[[NSUserDefaults standardUserDefaults] objectForKey:@"appKey"]
+    //                     collectorUrl:[[NSUserDefaults standardUserDefaults] objectForKey:@"collectorUrl"]
+    //                    enableLogging:true ];
+
+    
     return YES;
 }
 
@@ -40,6 +62,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)loadAppDefaults
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource: @"ECommerce" ofType: @"plist"];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithContentsOfFile: path];
+    NSLog(@"%@", dict);
+    [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"ECommerce URL"] forKey:@"url"];
+    [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"EUM Collector"] forKey:@"collectorUrl"];
+    [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"Username"] forKey:@"username"];
+    [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"Password"] forKey:@"password"];
+    [[NSUserDefaults standardUserDefaults] setObject:[dict objectForKey:@"EUM App Key"] forKey:@"appKey"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end
